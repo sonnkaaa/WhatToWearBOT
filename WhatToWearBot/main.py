@@ -157,7 +157,7 @@ def send_weather_update():
                     bot.send_message(chat_id, weather_message)
 
 def scheduler():
-    schedule.every().day.at("18:21").do(send_weather_update)
+    schedule.every().day.at("09:00").do(send_weather_update)
     while True:
         schedule.run_pending()
         time.sleep(1)
